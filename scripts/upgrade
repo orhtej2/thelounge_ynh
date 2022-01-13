@@ -21,6 +21,7 @@ path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 port=$(ynh_app_setting_get --app=$app --key=port)
+disable_media_preview=$(ynh_app_setting_get --app=$app --key=disable_media_preview)
 
 #=================================================
 # CHECK VERSION
@@ -47,6 +48,11 @@ ynh_abort_if_errors
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+
+if [ -z "$disable_media_preview" ]; then
+	disable_media_preview="false"
+	ynh_app_setting_set --app=$app --key=disable_media_preview --value=$disable_media_preview
+fi
 
 # If final_path doesn't exist, create it
 if [ -z "$final_path" ]; then

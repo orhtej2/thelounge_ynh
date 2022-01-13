@@ -1,0 +1,13 @@
+version = "1.0"
+
+[main]
+name = "The Lounge configuration"
+services = ["__APP__"]
+
+    [main.config]
+    name = "Configuration Options"
+
+        [main.config.disable_media_preview]
+        ask = "Disable Media Preview"
+        type = "boolean"
+        bind = "disableMediaPreview:__DATADIR__/config.js"

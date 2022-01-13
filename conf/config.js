@@ -120,7 +120,7 @@ module.exports = {
 	// This has no effect if `prefetch` is set to `false`.
 	//
 	// This value is set to `false` by default.
-	disableMediaPreview: false,
+	disableMediaPreview: __DISABLE_MEDIA_PREVIEW__,
 
 	// ### `prefetchStorage`
 
