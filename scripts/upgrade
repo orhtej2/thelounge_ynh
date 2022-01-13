@@ -50,7 +50,7 @@ ynh_abort_if_errors
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
 if [ -z "$disable_media_preview" ]; then
-	disable_media_preview="false"
+	disable_media_preview="0"
 	ynh_app_setting_set --app=$app --key=disable_media_preview --value=$disable_media_preview
 fi
 
