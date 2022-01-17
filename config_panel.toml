@@ -12,4 +12,4 @@ services = ["__APP__"]
         type = "boolean"
         yes = "true"
         no = "false"
-        bind = "disableMediaPreview:__DATADIR__/config.js"
+        bind = "disableMediaPreview:/home/yunohost.app/__APP__/config.js"
