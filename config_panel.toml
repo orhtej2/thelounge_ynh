@@ -10,5 +10,6 @@ services = ["__APP__"]
         [main.config.disable_media_preview]
         ask = "Disable Media Preview"
         type = "boolean"
-        default = true
+        yes = "true"
+        no = "false"
         bind = "disableMediaPreview:__DATADIR__/config.js"
